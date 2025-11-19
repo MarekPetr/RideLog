@@ -39,15 +39,14 @@ RideLog/
 │   │   ├── lib/            # Utilities, API clients, contexts
 │   │   └── ...
 │   └── package.json
-├── server/          # Express backend
-│   ├── src/
-│   │   ├── models/         # Mongoose models
-│   │   ├── routes/         # API routes
-│   │   ├── controllers/    # Route controllers
-│   │   ├── middleware/     # Auth middleware
-│   │   └── config/         # Database config
-│   └── package.json
-└── shared/          # Shared TypeScript types (for reference)
+└── server/          # Express backend
+    ├── src/
+    │   ├── models/         # Mongoose models
+    │   ├── routes/         # API routes
+    │   ├── controllers/    # Route controllers
+    │   ├── middleware/     # Auth middleware
+    │   └── config/         # Database config
+    └── package.json
 ```
 
 ## Local Development Setup
