@@ -67,7 +67,17 @@ export default function ProgressPage() {
                   labelFormatter={(value) => new Date(value).toLocaleDateString()}
                   formatter={(value: number) => [`${value} ${tc('km')}`, t('chart.distance')]}
                 />
-                <Line type="monotone" dataKey="distance" stroke="hsl(var(--primary))" strokeWidth={2} />
+                <Line
+                  type="monotone"
+                  dataKey="distance"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                  dot={{ fill: 'currentColor', stroke: '#ffffff', strokeWidth: 2, r: 6 }}
+                  activeDot={{ r: 8 }}
+                  connectNulls
+                  isAnimationActive={false}
+                  className="text-primary"
+                />
               </LineChart>
             </ResponsiveContainer>
           </div>
