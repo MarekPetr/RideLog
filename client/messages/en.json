@@ -1,0 +1,125 @@
+{
+  "common": {
+    "ridelog": "RideLog",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "getStarted": "Get Started",
+    "cancel": "Cancel",
+    "save": "Save Changes",
+    "edit": "Edit",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name"
+  },
+  "landing": {
+    "hero": {
+      "title": "Track Your Bike Rides",
+      "subtitle": "Log your rides, monitor your progress, and see how many kilometers you ride each day. Simple, powerful, and free.",
+      "getStarted": "Get Started",
+      "login": "Login"
+    },
+    "features": {
+      "title": "Features",
+      "logRides": {
+        "title": "Log Your Rides",
+        "description": "Easily record distance, duration, and notes for each ride",
+        "content": "Keep track of every ride with our simple and intuitive logging interface."
+      },
+      "viewRides": {
+        "title": "View All Rides",
+        "description": "See your complete ride history at a glance",
+        "content": "Browse, edit, and manage all your rides in one place."
+      },
+      "trackProgress": {
+        "title": "Track Progress",
+        "description": "Visualize your daily riding trends",
+        "content": "See your progress with beautiful charts showing kilometers per day."
+      }
+    },
+    "footer": "© 2025 RideLog. Track your rides and see the progress you make."
+  },
+  "auth": {
+    "login": {
+      "title": "Login to RideLog",
+      "description": "Enter your credentials to access your account",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "••••••",
+      "button": "Login",
+      "buttonLoading": "Logging in...",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Register here"
+    },
+    "register": {
+      "title": "Create an Account",
+      "description": "Sign up to start tracking your rides",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "passwordPlaceholder": "••••••",
+      "button": "Sign Up",
+      "buttonLoading": "Creating account...",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Login here"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Overview",
+      "logRide": "Log Ride",
+      "allRides": "All Rides",
+      "progress": "Progress"
+    },
+    "overview": {
+      "title": "Dashboard",
+      "subtitle": "Welcome back! Here's your riding summary.",
+      "totalRides": "Total Rides",
+      "totalDistance": "Total Distance",
+      "totalTime": "Total Time",
+      "avgSpeed": "Avg Speed",
+      "km": "km",
+      "min": "min",
+      "kmh": "km/h"
+    },
+    "newRide": {
+      "title": "Log a New Ride",
+      "cardTitle": "Ride Details",
+      "cardDescription": "Enter the details of your bike ride",
+      "date": "Date",
+      "distance": "Distance (km)",
+      "distancePlaceholder": "25.5",
+      "duration": "Duration (minutes)",
+      "durationPlaceholder": "90",
+      "notes": "Notes (optional)",
+      "notesPlaceholder": "How was your ride?",
+      "button": "Log Ride",
+      "buttonLoading": "Logging ride...",
+      "cancel": "Cancel"
+    },
+    "rides": {
+      "title": "All Rides",
+      "noRides": "No rides logged yet. Start by logging your first ride!",
+      "table": {
+        "date": "Date",
+        "distance": "Distance (km)",
+        "duration": "Duration (min)",
+        "notes": "Notes",
+        "actions": "Actions"
+      },
+      "edit": {
+        "title": "Edit Ride",
+        "description": "Update the details of your ride"
+      },
+      "confirmDelete": "Are you sure you want to delete this ride?"
+    },
+    "progress": {
+      "title": "Progress",
+      "subtitle": "Track your daily riding trends",
+      "noData": "No ride data available yet. Log some rides to see your progress!",
+      "chartTitle": "Daily Distance (km)",
+      "chartDescription": "Your riding distance over time",
+      "distance": "Distance"
+    }
+  }
+}

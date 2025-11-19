@@ -1,0 +1,125 @@
+{
+  "common": {
+    "ridelog": "RideLog",
+    "login": "Přihlásit se",
+    "logout": "Odhlásit se",
+    "register": "Registrovat se",
+    "getStarted": "Začít",
+    "cancel": "Zrušit",
+    "save": "Uložit změny",
+    "edit": "Upravit",
+    "delete": "Smazat",
+    "loading": "Načítání...",
+    "email": "E-mail",
+    "password": "Heslo",
+    "name": "Jméno"
+  },
+  "landing": {
+    "hero": {
+      "title": "Sledujte své cyklovýlety",
+      "subtitle": "Zaznamenávejte své výlety, sledujte svůj pokrok a zjistěte, kolik kilometrů ujedete každý den. Jednoduché, výkonné a zdarma.",
+      "getStarted": "Začít",
+      "login": "Přihlásit se"
+    },
+    "features": {
+      "title": "Funkce",
+      "logRides": {
+        "title": "Zaznamenejte své výlety",
+        "description": "Snadno zaznamenávejte vzdálenost, dobu trvání a poznámky ke každému výletu",
+        "content": "Sledujte každý výlet pomocí našeho jednoduchého a intuitivního rozhraní."
+      },
+      "viewRides": {
+        "title": "Zobrazit všechny výlety",
+        "description": "Zobrazte si kompletní historii výletů na první pohled",
+        "content": "Procházejte, upravujte a spravujte všechny své výlety na jednom místě."
+      },
+      "trackProgress": {
+        "title": "Sledujte pokrok",
+        "description": "Vizualizujte své denní trendy v jízdě",
+        "content": "Sledujte svůj pokrok pomocí krásných grafů zobrazujících kilometry za den."
+      }
+    },
+    "footer": "© 2025 RideLog. Sledujte své výlety a viditelný pokrok."
+  },
+  "auth": {
+    "login": {
+      "title": "Přihlášení do RideLog",
+      "description": "Zadejte své přihlašovací údaje pro přístup k účtu",
+      "emailPlaceholder": "vas@email.cz",
+      "passwordPlaceholder": "••••••",
+      "button": "Přihlásit se",
+      "buttonLoading": "Přihlašování...",
+      "noAccount": "Nemáte účet?",
+      "registerLink": "Zaregistrujte se zde"
+    },
+    "register": {
+      "title": "Vytvořit účet",
+      "description": "Zaregistrujte se a začněte sledovat své výlety",
+      "namePlaceholder": "Vaše jméno",
+      "emailPlaceholder": "vas@email.cz",
+      "passwordPlaceholder": "••••••",
+      "button": "Zaregistrovat se",
+      "buttonLoading": "Vytváření účtu...",
+      "haveAccount": "Již máte účet?",
+      "loginLink": "Přihlaste se zde"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Přehled",
+      "logRide": "Zaznamenat výlet",
+      "allRides": "Všechny výlety",
+      "progress": "Pokrok"
+    },
+    "overview": {
+      "title": "Přehled",
+      "subtitle": "Vítejte zpět! Zde je váš souhrn jízd.",
+      "totalRides": "Celkem výletů",
+      "totalDistance": "Celková vzdálenost",
+      "totalTime": "Celkový čas",
+      "avgSpeed": "Průměrná rychlost",
+      "km": "km",
+      "min": "min",
+      "kmh": "km/h"
+    },
+    "newRide": {
+      "title": "Zaznamenat nový výlet",
+      "cardTitle": "Podrobnosti výletu",
+      "cardDescription": "Zadejte podrobnosti o vašem cyklovýletu",
+      "date": "Datum",
+      "distance": "Vzdálenost (km)",
+      "distancePlaceholder": "25.5",
+      "duration": "Doba trvání (minuty)",
+      "durationPlaceholder": "90",
+      "notes": "Poznámky (volitelné)",
+      "notesPlaceholder": "Jak se vám jelo?",
+      "button": "Zaznamenat výlet",
+      "buttonLoading": "Zaznamenávání...",
+      "cancel": "Zrušit"
+    },
+    "rides": {
+      "title": "Všechny výlety",
+      "noRides": "Zatím nejsou zaznamenány žádné výlety. Začněte zaznamenáním svého prvního výletu!",
+      "table": {
+        "date": "Datum",
+        "distance": "Vzdálenost (km)",
+        "duration": "Doba trvání (min)",
+        "notes": "Poznámky",
+        "actions": "Akce"
+      },
+      "edit": {
+        "title": "Upravit výlet",
+        "description": "Aktualizujte podrobnosti o vašem výletu"
+      },
+      "confirmDelete": "Opravdu chcete smazat tento výlet?"
+    },
+    "progress": {
+      "title": "Pokrok",
+      "subtitle": "Sledujte své denní trendy v jízdě",
+      "noData": "Zatím nejsou k dispozici žádná data o výletech. Zaznamenejte nějaké výlety, abyste viděli svůj pokrok!",
+      "chartTitle": "Denní vzdálenost (km)",
+      "chartDescription": "Vaše ujetá vzdálenost v čase",
+      "distance": "Vzdálenost"
+    }
+  }
+}
