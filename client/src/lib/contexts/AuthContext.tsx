@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { authAPI } from '@/lib/api/auth';
 import type { User, LoginRequest, RegisterRequest } from '@/lib/types';
 
@@ -14,27 +14,26 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const getInitialUser = (): User | null => {
-  if (typeof window === 'undefined') return null;
-
-  const token = localStorage.getItem('token');
-  const storedUser = localStorage.getItem('user');
-
-  if (token && storedUser) {
-    try {
-      return JSON.parse(storedUser);
-    } catch (error) {
-      console.error('Failed to parse user data:', error);
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      return null;
-    }
-  }
-  return null;
-};
-
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [user, setUser] = useState<User | null>(getInitialUser);
+  const [user, setUser] = useState<User | null>(() => {
+    // Only access localStorage on client side
+    if (typeof window === 'undefined') return null;
+
+    const token = localStorage.getItem('token');
+    const storedUser = localStorage.getItem('user');
+
+    if (token && storedUser) {
+      try {
+        return JSON.parse(storedUser);
+      } catch (error) {
+        console.error('Failed to parse user data:', error);
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        return null;
+      }
+    }
+    return null;
+  });
   const [isLoading] = useState(false);
 
   const login = async (data: LoginRequest) => {
