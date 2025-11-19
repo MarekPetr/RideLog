@@ -8,7 +8,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 export default function Home() {
   const t = useTranslations('landing');
-  const tc = useTranslations('common');
 
   return (
     <div className="min-h-screen flex flex-col">
