@@ -10,9 +10,13 @@ dotenv.config();
 
 const app: Application = express();
 const PORT = process.env.PORT || 5000;
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:3000';
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: CLIENT_URL,
+  credentials: true,
+}));
 app.use(express.json());
 
 // Routes

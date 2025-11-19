@@ -13,11 +13,12 @@ Track your bike rides, monitor your progress, and visualize your daily riding tr
 ## Tech Stack
 
 ### Frontend
-- **Next.js 15+** (App Router)
+- **Next.js 16** (App Router)
 - **TypeScript**
 - **Tailwind CSS v4**
 - **shadcn/ui** components
 - **Recharts** for data visualization
+- **next-intl** for internationalization (English & Czech)
 - **axios** for API calls
 
 ### Backend
@@ -79,6 +80,7 @@ MONGODB_URI=mongodb://localhost:27017/ridelog
 # OR for MongoDB Atlas:
 # MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/ridelog
 JWT_SECRET=your_super_secret_jwt_key_change_this
+CLIENT_URL=http://localhost:3000
 ```
 
 Start the backend:
@@ -101,6 +103,9 @@ cp .env.local.example .env.local
 Edit `client/.env.local`:
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
+# Set to 'true' to use Next.js proxy (recommended to avoid CORS in development)
+# Set to 'false' to make direct API calls
+NEXT_PUBLIC_USE_PROXY=true
 ```
 
 Start the frontend:
@@ -133,6 +138,7 @@ The app will be running at `http://localhost:3000`
 4. Add environment variables:
    - `MONGODB_URI`: Your MongoDB Atlas connection string
    - `JWT_SECRET`: A secure random string
+   - `CLIENT_URL`: Your deployed frontend URL (e.g., `https://your-app.vercel.app`)
    - `PORT`: 5000 (or leave default)
 5. Deploy
 
@@ -183,7 +189,7 @@ pnpm run start    # Start compiled version
 
 ## Future Enhancements
 
-- [ ] Internationalization (Czech + English translations with next-intl)
+- [x] Internationalization (Czech + English translations with next-intl)
 - [ ] Dark mode toggle
 - [ ] Export rides to CSV
 - [ ] Ride categories (commute, exercise, leisure)
