@@ -12,7 +12,10 @@
     "loading": "Loading...",
     "email": "Email",
     "password": "Password",
-    "name": "Name"
+    "name": "Name",
+    "km": "km",
+    "min": "min",
+    "kmh": "km/h"
   },
   "landing": {
     "hero": {
@@ -109,7 +112,12 @@
       },
       "edit": {
         "title": "Edit Ride",
-        "description": "Update the details of your ride"
+        "description": "Update the details of your ride",
+        "date": "Date",
+        "distance": "Distance (km)",
+        "duration": "Duration (minutes)",
+        "notes": "Notes",
+        "save": "Save Changes"
       },
       "confirmDelete": "Are you sure you want to delete this ride?"
     },
@@ -117,9 +125,17 @@
       "title": "Progress",
       "subtitle": "Track your daily riding trends",
       "noData": "No ride data available yet. Log some rides to see your progress!",
-      "chartTitle": "Daily Distance (km)",
-      "chartDescription": "Your riding distance over time",
-      "distance": "Distance"
+      "chart": {
+        "title": "Daily Distance (km)",
+        "description": "Your riding distance over time",
+        "distance": "Distance"
+      },
+      "stats": {
+        "totalRides": "Total Rides",
+        "totalDistance": "Total Distance",
+        "totalTime": "Total Time",
+        "avgSpeed": "Avg Speed"
+      }
     }
   }
 }

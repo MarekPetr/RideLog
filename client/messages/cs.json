@@ -12,7 +12,10 @@
     "loading": "Načítání...",
     "email": "E-mail",
     "password": "Heslo",
-    "name": "Jméno"
+    "name": "Jméno",
+    "km": "km",
+    "min": "min",
+    "kmh": "km/h"
   },
   "landing": {
     "hero": {
@@ -109,7 +112,12 @@
       },
       "edit": {
         "title": "Upravit výlet",
-        "description": "Aktualizujte podrobnosti o vašem výletu"
+        "description": "Aktualizujte podrobnosti o vašem výletu",
+        "date": "Datum",
+        "distance": "Vzdálenost (km)",
+        "duration": "Doba trvání (minuty)",
+        "notes": "Poznámky",
+        "save": "Uložit změny"
       },
       "confirmDelete": "Opravdu chcete smazat tento výlet?"
     },
@@ -117,9 +125,17 @@
       "title": "Pokrok",
       "subtitle": "Sledujte své denní trendy v jízdě",
       "noData": "Zatím nejsou k dispozici žádná data o výletech. Zaznamenejte nějaké výlety, abyste viděli svůj pokrok!",
-      "chartTitle": "Denní vzdálenost (km)",
-      "chartDescription": "Vaše ujetá vzdálenost v čase",
-      "distance": "Vzdálenost"
+      "chart": {
+        "title": "Denní vzdálenost (km)",
+        "description": "Vaše ujetá vzdálenost v čase",
+        "distance": "Vzdálenost"
+      },
+      "stats": {
+        "totalRides": "Celkem výletů",
+        "totalDistance": "Celková vzdálenost",
+        "totalTime": "Celkový čas",
+        "avgSpeed": "Průměrná rychlost"
+      }
     }
   }
 }
