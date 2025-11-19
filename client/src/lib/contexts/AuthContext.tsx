@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 import { authAPI } from '@/lib/api/auth';
 import type { User, LoginRequest, RegisterRequest } from '@/lib/types';
 
@@ -14,26 +14,28 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+const getInitialUser = (): User | null => {
+  if (typeof window === 'undefined') return null;
 
-  useEffect(() => {
-    // Check if user is logged in on mount
-    const token = localStorage.getItem('token');
-    const storedUser = localStorage.getItem('user');
+  const token = localStorage.getItem('token');
+  const storedUser = localStorage.getItem('user');
 
-    if (token && storedUser) {
-      try {
-        setUser(JSON.parse(storedUser));
-      } catch (error) {
-        console.error('Failed to parse user data:', error);
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-      }
+  if (token && storedUser) {
+    try {
+      return JSON.parse(storedUser);
+    } catch (error) {
+      console.error('Failed to parse user data:', error);
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      return null;
     }
-    setIsLoading(false);
-  }, []);
+  }
+  return null;
+};
+
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
+  const [user, setUser] = useState<User | null>(getInitialUser);
+  const [isLoading] = useState(false);
 
   const login = async (data: LoginRequest) => {
     const response = await authAPI.login(data);
