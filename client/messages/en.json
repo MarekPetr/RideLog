@@ -98,7 +98,21 @@
       "notesPlaceholder": "How was your ride?",
       "button": "Log Ride",
       "buttonLoading": "Logging ride...",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "errors": {
+        "general": "Failed to log ride. Please try again",
+        "date": {
+          "required": "Date is required"
+        },
+        "distance": {
+          "required": "Distance is required",
+          "positive": "Distance must be a positive number"
+        },
+        "duration": {
+          "required": "Duration is required",
+          "positive": "Duration must be a positive number"
+        }
+      }
     },
     "rides": {
       "title": "All Rides",

@@ -14,28 +14,29 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
-const rideSchema = z.object({
-  date: z.string().min(1, 'Date is required'),
-  distance: z.string()
-    .min(1, 'Distance is required')
-    .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) > 0, {
-      message: 'Distance must be a positive number',
-    }),
-  duration: z.string()
-    .min(1, 'Duration is required')
-    .refine((val) => !isNaN(parseInt(val)) && parseInt(val) > 0, {
-      message: 'Duration must be a positive number',
-    }),
-  notes: z.string().optional(),
-});
-
-type RideFormData = z.infer<typeof rideSchema>;
 
 export default function NewRidePage() {
   const t = useTranslations('dashboard.newRide');
   const tc = useTranslations('common');
   const [error, setError] = useState('');
   const router = useRouter();
+
+  const rideSchema = z.object({
+    date: z.string().min(1, t('errors.date.required')),
+    distance: z.string()
+      .min(1, t('errors.distance.required'))
+      .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) > 0, {
+        message: t('errors.distance.positive'),
+      }),
+    duration: z.string()
+      .min(1, t('errors.duration.required'))
+      .refine((val) => !isNaN(parseInt(val)) && parseInt(val) > 0, {
+        message: t('errors.duration.positive'),
+      }),
+    notes: z.string().optional(),
+  });
+
+  type RideFormData = z.infer<typeof rideSchema>;
 
   const {
     register,
@@ -83,7 +84,7 @@ export default function NewRidePage() {
             </Alert>
           )}
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
             <div className="space-y-2">
               <Label htmlFor="date">{t('date')}</Label>
               <Input

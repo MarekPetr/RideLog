@@ -98,7 +98,21 @@
       "notesPlaceholder": "Jak se vám jelo?",
       "button": "Zaznamenat výlet",
       "buttonLoading": "Zaznamenávání...",
-      "cancel": "Zrušit"
+      "cancel": "Zrušit",
+      "errors": {
+        "general": "Jízdu se nepodařilo uložit. Zkuste to znovu.",
+        "date": {
+          "required": "Zadejte prosím datum"
+        },
+        "distance": {
+          "required": "Zadejte prosím vzdálenost",
+          "positive": "Vzdálenost musí být kladné číslo"
+        },
+        "duration": {
+          "required": "Zadejte prosím dobu trvání",
+          "positive": "Doba trvání musí být kladné číslo"
+        }
+      }
     },
     "rides": {
       "title": "Všechny výlety",
